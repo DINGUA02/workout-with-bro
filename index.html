@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Bro 💪🏼 </title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=arrow_upward" />    
+    <link rel="stylesheet" href="style.css">
+    <script defer src="script.js"></script>
+</head>
+<header>
+    <div class="title-container">
+        <h1>Hey, I'm Bro! Your workout buddy!</h1>
+        <p>"Your AI powered workout buddy. Here to provide workout programs for begginners <br> and advanced lifters."
+        <br><br>Here some guidelines to remember before starting your workout: <br><br>
+        </p>
+        <ul>
+            <li>Always stretch before and after working out.</li>
+            <li>Observe proper form. Use the "Play Demo" tab for reference.</li>
+            <li>Don't forget to indicate your fitness level for better exercise suggestions.</li>
+            <li>For questions or clarifications feel free to hit me up at the chatbox located below.</li>
+        </ul>
+    </div>
+    <div class="listContainer">
+        <form class="fitness-level">
+            <label for="beginner">
+                <input type="radio" class="beginner" value="beginner" name="fitness-level"> Beginner
+            </label>
+            <label for="advance">
+                <input type="radio" class="advanced" value="advanced" name="fitness-level"> Advanced
+            </label>
+        </form>
+        <ul class="bodyPartsList">
+            <li class="chest list" data-part="chest">Chest</li>
+            <li class="shoulders list" data-part="shoulders">Shoulders</li>
+            <li class="back list" data-part="back">Back</li>
+            <li class="arms list" data-part="arms">Arms</li>
+            <li class="legs list" data-part="legs">Legs</li>
+        </ul>
+    </div>
+</header>
+<main>
+    <section class="displayWorkout">
+        <div class="sub-title-container">
+            <h2>Workout List</h2>
+            <p class="hidden">P.S. Don't forget to stretch!</p>
+        </div>
+        <div class="workout-results-container">
+            <ul class="workOutResultA">
+            </ul>
+        </div>
+        <div class="displayDemo">
+            <h2>Play Workout Demo</h2>
+            <div class="demoFormContainer">
+            <input type="text" class="demoInput" placeholder="Generate Demo">
+            <button class="demoBtn"><span class="material-symbols-outlined">arrow_upward</span></button>
+            </div>
+            <div class="demoResultsContainer">
+                <ul class="demoResults">
+                </ul>
+            </div>
+        </div>
+    </section>
+    <section class="chats-section">
+        <h2 class="chatWithBroBtn">Hide chatbox</h2>
+        <div class="chatsContainer">
+            <div class="botChatBubble container">
+            </div>
+            <div class="userChatBubble container">
+          </div>
+        </div>
+        <div class="userMessageBox">
+                <input class="userInput" type="text" placeholder="Ask Bro" required>
+                <button class="sendBtn"><span class="material-symbols-outlined">arrow_upward</span></button>
+            </div>
+    </section>
+</main>
+<footer>
+    <p class="footer-credits">&copy 2025 DJ Ingua. All rights reserved</p>
+</footer>
+<body>
+    
+</body>
+</html>
