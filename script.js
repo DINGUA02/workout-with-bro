@@ -12,7 +12,7 @@ const demoResults = document.querySelector(`.demoResults`);
 
 
 /* API URL */
-const GEMINI_API_KEY = `AIzaSyBCd4xqGsqiUfLihC6BFHTBKsVOWQItjps`;
+const GEMINI_API_KEY = `AIzaSyCkmiBfLbyt7hn_f1ozE351QdggGjlnSKE`;
 const GEMINI_API_URL = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${GEMINI_API_KEY}`;
 const DUMMY_JSON_API_URL = 'https://dummyjson.com/image/150';
 
