@@ -23,8 +23,9 @@ body {
     background-color: var(--primary-color);
     background-image: url(assets/background.jpg);
     background-repeat: no-repeat;
-    background-position:center;
+    background-position:bottom;
     background-size: cover;
+    background-attachment: fixed;
     margin: 1% 5%;
     padding: 2%;
     height: 100vh;
@@ -32,8 +33,10 @@ body {
 }
 
 section {
-    margin-top: 1%;
-    width: 50%;
+    margin: 1%;
+    width: 100%;
+    max-width: 960px;
+    margin-inline: auto;
 }
 
 .hidden {
@@ -49,7 +52,20 @@ img {
 
 /* Flex Area */
 
-main, header, .displayWorkout, .chats-section, .listContainer, .fitness-level, .bodyPartsList, .workout-results-container, .chatsContainer, .container, .userMessageBox, .displayDemo, .demoFormContainer, .demoResults {
+main, 
+header, 
+.displayWorkout, 
+.chats-section, 
+.listContainer, 
+.fitness-level, 
+.bodyPartsList, 
+.workout-results-container, 
+.chatsContainer,
+ .container, 
+.userMessageBox, 
+.displayDemo,
+ .demoFormContainer, 
+ .demoResults {
     display: flex;
 }
 
@@ -63,31 +79,34 @@ header {
     flex-direction: column;
     row-gap: 15px;
     padding: 10px;
+    margin: 0 0 5rem;
     
 }
 
 .title-container {
-    padding: 10px 20px 20px;
     color: var(--primary-text-color);
     border-radius: 5px;
-    width: 800px;
+    width: 100%;
+    max-width: 800px;
 }
 
 .title-container h1 {
     text-align: center;
-    font-size: 5rem;
+    font-size: 4rem;
     margin-bottom: 1rem;
 }
 
 .title-container p {
     text-align: center;
     font-weight: 700;
-    padding-left: 15px;
-    color: var(--secondary-text-color)
+    color: var(--primary-text-color)
 }
 
-.title-container ul {
-    padding-left: 75px;
+
+/* Main */
+main {
+    flex-wrap:wrap;
+    gap: 2rem;
 }
 
 
@@ -95,14 +114,16 @@ header {
 
 .listContainer {
     flex-direction: column;
-    row-gap: 25px;
-    width: 500px;
+    gap: 25px;
+    width: 100%;
+    max-width: 500px;
     cursor: pointer;
 }
 
 .fitness-level, label {
     gap: 20px;
     justify-content: center;
+    flex-wrap: wrap;
     cursor: pointer;
 }
 
@@ -112,12 +133,14 @@ header {
     border: 1px solid;
     background-color: var(--secondary-color);
     border-radius: 5px;
+    flex-shrink: 1;
+    padding: 10px;
+    gap: 10px;
 }
 
 .list {
     color: var(--primary-text-color);
     font-weight: 700;
-    padding: 10px;
     border-radius: 25px;
 }
 
@@ -133,7 +156,6 @@ header {
     align-items: center;
     row-gap: 30px;
     padding: 30px;
-    min-height: 646px;
     flex: 1;
 }
 
@@ -153,17 +175,19 @@ font-size: 1.5rem;
 }
 
 .workout-results-container {
-    width: 500px;
-    height: 240px;
+    width: 100%;
+    max-width: 500px;
     justify-content: center;
 }
 .workout-results-container ul {
     line-height: 40px;
-    margin: 0 auto
-    font-size: 2rem;
+    margin: 0 auto;
+    font-size: 1.25rem;
     font-weight: 600;
     justify-content: center;
-    align-items: center;
+    flex-shrink: 1;
+    flex-wrap:wrap;
+
 }
 
 /* Display Workout Demo */
@@ -208,6 +232,7 @@ font-size: 1.5rem;
 .demoResults {
     justify-content: center;
     align-items: center;
+    flex-direction: column;
 }
 
 .demoResults li {
@@ -224,7 +249,7 @@ font-size: 1.5rem;
 .chats-section {
     flex-direction: column;
     align-items: center;
-    padding: 10px;
+    max-width: 700px;
     row-gap: 15px;
 }
 
@@ -243,16 +268,17 @@ font-size: 1.5rem;
 }
 
 .chatsContainer {
-    height: 500px;
-    width: 700px;
+    width: 100%;
+    height: 400px;
     background-color: var(--primary-color);
     flex-direction: column;
     row-gap: 20px;
     align-items: center;
-    padding: 10px 30px;
+    padding: 10px 10px;
     border-radius: 15px;
     overflow-y: auto;
     scroll-behavior: smooth;
+    margin: 0;
 }
 
 .chatsContainer::-webkit-scrollbar {
@@ -290,7 +316,7 @@ font-size: 1.5rem;
     align-self: center;
     padding: 10px;
     border-radius: 50px;
-    width: 400px;
+    max-width: 400px;
     background-color: var(--chatbox-color);
 
 }
@@ -319,7 +345,6 @@ font-size: 1.5rem;
 
 .footer-credits {
     text-align: center;
-    margin: 10rem;
-    padding: 10px;
+    margin: 2rem;
 }
 

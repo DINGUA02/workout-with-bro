@@ -1,0 +1,40 @@
+@media (max-width: 768px) {
+header {
+    margin: 5rem;
+ }
+}
+
+@media (max-width: 480px) {
+header {
+    margin: 1rem;
+}
+
+.title-container h1 {
+    font-size: 2rem;
+}
+
+.displayWorkout {
+    padding: 15px 25px;
+}
+
+.bodyPartsList {
+justify-content: center;
+font-size: 15px;
+gap: 10px;
+}
+
+.workout-results-container {
+    font-size: 15px;
+}
+
+
+.title-container p,
+.sub-title-container p {
+font-size: 14px;
+}
+
+.userMessageBox input {
+font-size: 0.9rem;
+}
+}
+
