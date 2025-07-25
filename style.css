@@ -14,7 +14,7 @@
     --secondary-text-color: #000;
     --primary-color: rgba(130, 130, 130, 0.4);
     --secondary-color: rgba(139, 0, 0, 0.3);
-    --chatbox-color: #d3d3d3;
+    --chatbox-color: rgba(255, 255, 255, 0.7);
     --border-color: #a9a9a9;
 }
 
@@ -134,6 +134,7 @@ header {
     row-gap: 30px;
     padding: 30px;
     min-height: 646px;
+    flex: 1;
 }
 
 .sub-title-container {
@@ -177,7 +178,7 @@ font-size: 1.5rem;
     padding: 2px;
     border-radius: 10px;
     width: 200px;
-    background-color: var(--primary-color);
+    background-color: var(--chatbox-color);
     border: 1px solid var(--border-color);
     justify-content: center;
     margin-bottom: 20px;
@@ -191,7 +192,7 @@ font-size: 1.5rem;
 }
 
 .demoInput::placeholder {
-    color: var(--secondary-text-color)
+    color: var(--secondary-text-color);
 }
 .demoInput:focus {
     outline: none;
@@ -230,22 +231,24 @@ font-size: 1.5rem;
 .chats-section h2 {
     background-color: var(--secondary-color);
     padding: 10px 20px;
-    color: var(--secondary-text-color);
-    border-radius: 50px;
+    color: var(--primary-text-color);
+    border-radius: 5px;
+    border: 1px solid var(--border-color);
     cursor: pointer;
 }
 
 .chats-section h2:hover {
-    background-color: #ff0000;
+    transform: scale(1.1);
+    transition: transform 0.3 ease;
 }
 
 .chatsContainer {
     height: 500px;
     width: 700px;
+    background-color: var(--primary-color);
     flex-direction: column;
     row-gap: 20px;
     align-items: center;
-    border: solid 1px var(--border-color);
     padding: 10px 30px;
     border-radius: 15px;
     overflow-y: auto;
@@ -276,7 +279,8 @@ font-size: 1.5rem;
     
 }
 .bot {
-    background-color: var(--secondary-color)
+    background-color: var(--secondary-color);
+    color: var(--primary-text-color);
 }
 .userChatBubble {
     align-self: flex-end;
@@ -302,15 +306,20 @@ font-size: 1.5rem;
     outline: none;
 }
 
+.userInput::placeholder {
+    color: var(--secondary-text-color);
+}
+
 .sendBtn {
-    color: var(--primary-color);
+    color: var(--secondary-text-color);
     background-color: transparent;
     border: none;
     cursor: pointer;
 }
 
-footer {
+.footer-credits {
     text-align: center;
-    margin-top: 5rem;
+    margin: 10rem;
+    padding: 10px;
 }
 
