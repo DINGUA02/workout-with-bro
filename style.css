@@ -10,10 +10,10 @@
 }
 
 :root {
-    --primary-text-color: #fff;
+    --primary-text-color: #fff9db;
     --secondary-text-color: #000;
-    --primary-color: #000;
-    --secondary-color: #8b0000;
+    --primary-color: rgba(130, 130, 130, 0.4);
+    --secondary-color: rgba(139, 0, 0, 0.3);
     --chatbox-color: #d3d3d3;
     --border-color: #a9a9a9;
 }
@@ -21,6 +21,10 @@
 body {
     color: var(--primary-text-color);
     background-color: var(--primary-color);
+    background-image: url(assets/background.jpg);
+    background-repeat: no-repeat;
+    background-position:center;
+    background-size: cover;
     margin: 1% 5%;
     padding: 2%;
     height: 100vh;
@@ -38,9 +42,14 @@ section {
 
 }
 
+img {
+    display: block;
+    max-inline-size: 100%;
+}
+
 /* Flex Area */
 
-main, header, .displayWorkout, .chats-section, .listContainer, .fitness-level, .bodyPartsList, .workout-results-container, .chatsContainer, .container, .userMessageBox, .displayDemo, .demoFormContainer {
+main, header, .displayWorkout, .chats-section, .listContainer, .fitness-level, .bodyPartsList, .workout-results-container, .chatsContainer, .container, .userMessageBox, .displayDemo, .demoFormContainer, .demoResults {
     display: flex;
 }
 
@@ -53,33 +62,36 @@ header {
     align-items: center;
     flex-direction: column;
     row-gap: 15px;
-    border-bottom: 1px solid var(--border-color);
     padding: 10px;
     
 }
 
 .title-container {
-    background-color: var(--secondary-color);
     padding: 10px 20px 20px;
-    color: var(--secondary-text-color);
+    color: var(--primary-text-color);
     border-radius: 5px;
     width: 800px;
 }
 
 .title-container h1 {
     text-align: center;
-    font-size: 3rem;
+    font-size: 5rem;
+    margin-bottom: 1rem;
 }
 
 .title-container p {
-    text-align: justify;
-    font-weight: 500;
+    text-align: center;
+    font-weight: 700;
     padding-left: 15px;
+    color: var(--secondary-text-color)
 }
 
 .title-container ul {
     padding-left: 75px;
 }
+
+
+/* Display Workout */
 
 .listContainer {
     flex-direction: column;
@@ -97,24 +109,25 @@ header {
 .bodyPartsList {
     justify-content: space-evenly;
     list-style: none;
+    border: 1px solid;
+    background-color: var(--secondary-color);
+    border-radius: 5px;
 }
 
 .list {
-    background-color: var(--secondary-color);
-    color: var(--secondary-text-color);
+    color: var(--primary-text-color);
     font-weight: 700;
-    padding: 5px;
-    border-radius: 3px;
+    padding: 10px;
+    border-radius: 25px;
 }
 
 .list:hover {
-    background-color: #ff0000;
+    transform: scale(1.2);
+    transition: transform 0.3 ease;
 }
 
-/* Display Workout */
-
 .displayWorkout {
-    border: solid 1px var(--border-color);
+    background-color: var(--primary-color);
     border-radius: 15px;
     flex-direction: column;
     align-items: center;
@@ -145,7 +158,11 @@ font-size: 1.5rem;
 }
 .workout-results-container ul {
     line-height: 40px;
-    font-size: 1.2rem;
+    margin: 0 auto
+    font-size: 2rem;
+    font-weight: 600;
+    justify-content: center;
+    align-items: center;
 }
 
 /* Display Workout Demo */
@@ -154,6 +171,7 @@ font-size: 1.5rem;
     flex-direction: column;
     align-items: center;
     row-gap: 5px;
+    
 }
 .demoFormContainer {
     padding: 2px;
@@ -169,18 +187,26 @@ font-size: 1.5rem;
     font-size: 1rem;
     background-color: transparent;
     border: none;
-    color: var(--primary-text-color);
+    color: var(--secondary-text-color);
+}
+
+.demoInput::placeholder {
+    color: var(--secondary-text-color)
 }
 .demoInput:focus {
     outline: none;
 }
 
 .demoBtn {
-    color: var(--primary-color);
+    color: var(--secondary-text-color);
     background-color: transparent;
     border: none;
     cursor: pointer;
-    color: var(--secondary-color);
+}
+
+.demoResults {
+    justify-content: center;
+    align-items: center;
 }
 
 .demoResults li {
