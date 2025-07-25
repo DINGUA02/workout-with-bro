@@ -1,4 +1,3 @@
-import GEMINI_API_KEY from "./public/apikey";
 /* Variables */
 const beginner = document.querySelector(`.beginner`);
 const advanced = document.querySelector(`.advanced`);
